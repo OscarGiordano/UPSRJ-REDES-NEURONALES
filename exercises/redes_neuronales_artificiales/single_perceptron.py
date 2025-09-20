@@ -47,8 +47,15 @@ set_logging(log_file='single_perceptron.log')
 #           - un peso "w"
 #
 class InputData:
-    def __init__(self):
-        pass
+    def __init__(self, x:float):
+        self.x=x
+        self.w = self.init_weigth()
+    def init_weigth(self):
+
+        return random.random()
+    def update_weight(self, w:float):
+        self.w=w
+    
 
 clog(InputData)
 
@@ -67,7 +74,12 @@ clog(InputData)
 #           - una salida "a" definida por su función de activación
 #
 class Perceptron:
-    def __init__(self):
-        pass
-    
+    def _init_(self, inputs: list[InputData], b=None):
+        self.inputs = inputs
+        self.b = b if b is not None else random.random()
+    def act(self, z): 
+        return 1/(1+np.exp(-z))  # Sigmoide
+    def forward(self):
+        z = sum(i.x * i.w for i in self.inputs) + self.b
+        return self.act(z)
 clog(Perceptron)
