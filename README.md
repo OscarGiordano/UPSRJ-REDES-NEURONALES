@@ -194,4 +194,4 @@ Para la entrega:
 **Autor:** Jesús Salvador López Ortega  
 [LinkedIn](https://www.linkedin.com/in/jesus-salvador-lopez-ortega/) | [GitHub](https://github.com/chucholoport)
 
-Actualizado: septiembre 2025
+Actualizado: septiembre 2025  
